@@ -10,6 +10,24 @@ header {
     grid-column: 1 / 4;
 }
 
+nav{
+    margin: 0 auto 2rem;
+    max-width: 90vw;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    align-items: center;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+
 main {
     background: lightgrey;
     grid-column: 2 / 3;
