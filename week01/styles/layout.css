@@ -16,13 +16,13 @@ main {
 }
 
 .s1 {
-    background: ;
+    background: lightblue;
     grid-column: 1 / 2;
     padding: 1rem;
 }
 
 .s2 {
-    background: ;
+    background: darkblue;
     grid-column: 3 / 4;
     padding: 1rem;
 }
