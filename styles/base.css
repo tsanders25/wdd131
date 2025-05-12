@@ -1,0 +1,167 @@
+:root {
+    /* CSS HEX */
+    --oxford-blue: #0a122aff;
+    --asparagus: #698f3fff;
+    --seasalt: #fbfaf8ff;
+    --bittersweet: #fa7e61ff;
+    --raw-umber: #916953ff;
+}
+
+/* CSS SPACING */
+* {
+    padding: 1rem;
+
+}
+
+body {
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    color: black;
+
+    display: grid;
+
+}
+
+/* HEADER CSS */
+
+header {
+    background-color: var(--oxford-blue);
+
+    padding: 2rem;
+    grid-column: 1 / 4;
+}
+
+h1 {
+    background-color: var(--oxford-blue);
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 2rem;
+    text-align: center;
+
+    color: var(--seasalt);
+}
+
+/* NAVIGATION CSS  */
+
+nav {
+    background-color: var(--oxford-blue);
+    margin: 0 auto;
+    max-width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: larger;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    color: white;
+
+}
+
+nav ul li {
+    flex: 1 0 auto;
+}
+
+/* MAIN CSS */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    border: 2px solid var(--oxford-blue);
+
+    background-color: var(--seasalt);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about_me {
+    grid-column: 1 / 3;
+
+}
+
+#about_me h2 {
+    background-color: var(--asparagus);
+}
+
+.about_content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+#about_me p {
+    flex: 1;
+    line-height: 1.6;
+}
+
+/* .profile_img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.country_flag {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.state_flag {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover; 
+}  */
+
+
+
+
+#web_dev {
+    grid-column: 3 / 4;
+}
+
+#web_dev h2 {
+    background-color: var(--bittersweet);
+}
+
+footer {
+    background-color: var(--oxford-blue);
+    color: var(--seasalt);
+
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 4;
+
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 2rem;
+    text-align: center;
+
+}

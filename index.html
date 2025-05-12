@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Ty Sanders">
+    <meta name="description"
+        content="This is a home page for Ty Sanders, an assignment for WDD 131- Dynamic Web Development. It complies with the rubric listed on the assignment page.">
+
+    <title>WDD 131 - Dynamic Web Development - Ty Sanders</title>
+
+    <!-- CSS and JS LINKS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Ty Sanders WDD131</h1>
+    <header>
+        <h1>WDD131 | Dynamic Web Fundamentals | Ty Sanders</h1>
+        <nav class="active">
+            <ul>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card" id="about_me">
+            <h2>About Me</h2>
+            <div class="about_content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Totam praesentium exercitationem quaerat fuga cum quas dolores
+                    odit aut alias ipsa sapiente commodi beatae, quidem facere cumque
+                    repellendus, earum reiciendis consectetur!</p>
+                <img src="images/profile.webp" alt="Profile Pic" class="profile_img">
+            </div>
+            <div class="country_content">
+                <h2>Country of Residence</h2>
+                <figure>
+                    <img src="images/Flag_of_Washington.webp" alt="State Flag" width="500" class="state_flag">
+                    <figcaption>Lorem ipsum dolor sit amet.</figcaption>
+                    <img src="images/Flag_of_the_United_States.webp" alt="Country Flag" width="500"
+                        class="country_flag">
+                    <figcaption>Lorem ipsum dolor sit amet.</figcaption>
+                </figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Perferendis ex a consectetur praesentium minus dolor quis id,
+                    laborum qui. Facere voluptatibus enim excepturi debitis vero
+                    voluptate at reiciendis cupiditate eligendi!</p>
+            </div>
+        </section>
+        <section class="card" id="web_dev">
+            <h2>Web Development Resources</h2>
+            <ul>
+                <li><a href="#">TBD</a></li>
+                <li><a href="#">TBD</a></li>
+                <li><a href="#">TBD</a></li>
+                <li><a href="#">TBD</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span> | Ty Sanders | Washington U.S.A
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
