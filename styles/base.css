@@ -1,0 +1,105 @@
+/* <weight>: Use a value from 100 to 900
+<uniquifier>: Use a unique and descriptive class name */
+
+font {
+.big-shoulders-<uniquifier> {
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / 300px 1fr auto;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    grid-column: 1 / 4;
+    
+}
+
+h1 {
+    text-align: center;
+    background-color: #034748;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    background-color: #001021;
+    color: #fff;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation a {
+    font-weight: 700;
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+
+    color: #fff;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: #11b5e4;
+}
+
+main {
+    grid-column: 2 / 3;
+    padding: 2rem;
+
+    font-weight: 700;
+    background: #1481ba;
+    color: #fff;
+}
+
+.card_1 {
+    grid-column: 1 / 2;
+    /*padding: 2rem;*/
+
+    font-weight: 700;
+    background: #79c99e;
+    color: #fff;
+
+}
+
+.card_2 {
+    grid-column: 3 / 4;
+    padding: 2rem;
+
+    font-weight: 700;
+    background: #79c99e;
+    color: #fff;
+
+}
+
+footer {
+    grid-column: 1 / 4;
+    padding: 2rem;
+    text-align: center;
+
+    font-weight: 700;
+    background: #11b5e4;
+    color: #fff;
+}
