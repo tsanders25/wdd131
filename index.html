@@ -4,43 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD131 | Dynamic Web Fundamentals | Ty Sanders</title>
-    <meta name="description" content="Website dedicated to learning dynamic web fundmaentals for BYU Pathway's WDD131 class">
+    <meta name="description" content="Ty Sanders personal website dedicated to learning dynamic web fundmaentals for BYU Pathway's WDD131 class">
     <meta name="author" content="Ty Sanders">
 
     <!--links to style and scripts-->
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
-        <h1 id="Course Title">WDD131 | Dynamic Web Fundamentals | Ty Sanders</h1>
+        <span id="course-title">WDD131 | Dynamic Web Fundamentals | Ty Sanders</span>
         
         <nav>
             <ul class="navigation">
-                <li><a href="#" title="Home">Home</a></li>
-                <li><a href="#" title="Projects">Projects</a></li>
-                <li><a href="#" title="Services">Services</a></li>
-                <li><a href="#" title="Contact Us">Contact Us</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p34#p34" title="favorite scripture">Favorite Scripture</a></li>
+                <li><a href="#" title="Final Project">Final Project</a></li>
+                <li><a href="https://byupw.instructure.com/" title="canvas">Canvas</a></li>
+                <li><a href="https://www.linkedin.com/jobs?mcid=6994434350142418944&src=go-pa&trk=sem-ga_campid.18853522261_asid.146084015209_crid.732549151385_kw.linkedin_d.c_tid.kwd-296170574619_n.g_mt.e_geo.9011306&cid=&gclsrc=aw.ds&gad_source=1&gad_campaignid=18853522261&gbraid=0AAAAABIeiSohG8a2pqibGdvojGER2aJbV&gclid=EAIaIQobChMIndjyl_yilAMV5TLUAR3VvShnEAAYASAAEgIqiPD_BwE" title="Linked In">Linked In</a></li>
                 </ul>
         </nav>
     </header>
+    <h1>Ty Sanders</h1>
     <main>
-    <h1>Don't Call It A Comeback</h1>
     <section class="card_1">
-       <p>This is a box</p>
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et esse asperiores ullam consectetur placeat odio eius quisquam fugiat nihil recusandae eos corrupti laborum soluta, fuga quos architecto numquam illum? Debitis.</p>
+        <figure>
+            <img src="images/profile.webp" alt="profile picture">
+            <figcaption>Enter a caption</figcaption>
+        </figure>
+    </section>
 
-    </section class="card_2">
-        <p>This is a box</p>
+    <section class="card_2">
+        <h3>Brunswick, Georgia</h3>
+        <figure>
+            <img src="images/US_Flag.svg.webp" alt="US Flag">
+            <figcaption>United States Flag</figcaption>
+        </figure>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In officia quam, nostrum earum, accusantium natus neque alias ullam facilis rerum magni ipsam, architecto culpa aliquam. Sit mollitia quisquam dolores ipsum.</p>
+    </section>
 
     </main>
+
+    <div class="aside-content">
+        <h2>Web Dev Resources</h2>
+        <ul>
+            <li><a href="#">Dev.to Community</a></li>
+            <li><a href="#">Smashing Magazine</a></li>
+            <li><a href="#">CSS Tricks</a></li>
+            <li><a href="#">W3 Schools</a></li>
+            <li><a href="#">Udemy</a></li>
+            <li><a href="#">Lorem Piscum Image Placeholder</a></li>
+        </ul>
+    </div>
     <footer>
-        <p>WDD131 | <span style="color: blue;">Dynamic Web Fundamentals</span> | Ty Sanders</p>
+        <p>&copy;<span id="currentyear"></span> | Ty Sanders | United States</p>
+        <p> Last Modified <span id="lastModified"></span></p>
     </footer>
     </body>
 </html>
