@@ -101,12 +101,15 @@ main h3 {
     text-decoration: underline;
 }
 
-.card_1 {
+.card {
     display: grid;
-    grid-template-columns: 2fr 1fr;
     font-weight: 700;
     background: #fff;
     color: black;
+}
+
+.card_1 {
+    grid-template-columns: 2fr 1fr;
 }
 
 .card_1 p {
@@ -124,11 +127,7 @@ main h3 {
 }
 
 .card_2 {
-    display: grid;
     grid-template-columns: 1fr 2fr;
-    font-weight: 700;
-    background: #fff;
-    color: black;
 }
 
 .card_2 figure {
