@@ -1,0 +1,179 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+        }
+
+
+
+header, footer {
+    width: 100%;
+    background-color: #034748;
+    color: white;
+    padding: 1rem;
+}
+
+footer {
+    grid-column: 1 / 4;
+    padding: 2rem;
+    text-align: center;
+
+    font-weight: 700;
+    background: #034748;
+    color: #fff;
+}
+
+#temple-album {
+    padding: 1rem;
+    font-size: x-large;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    max-width: 640px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    place-items: center;
+}
+
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 4;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.navigation a:hover {
+    
+    color: white;
+}
+
+.open a {
+    display: block;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+
+    border: 1px solid gray;
+
+}
+
+figcaption {
+    text-align: center;
+}
+
+/*header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #034748;
+    padding: 2rem;
+    
+}
+
+#temple-album {
+    color: white;
+    font-size: xx-large;
+}
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    background-color: #034748;
+    color: #fff;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation a {
+    font-weight: 700;
+    font-size: x-large;
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+
+    color: #fff;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+h1 {
+    grid-column: 1 / 4;
+    text-align: center;
+
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+
+    border: 1px solid gray;
+
+
+}
+
+figcaption {
+    text-align: center;
+}
