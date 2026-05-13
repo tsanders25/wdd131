@@ -28,6 +28,10 @@ header {
     font-size: xx-large;
 }
 
+nav {
+    display: flex;
+}
+
 .navigation {
     list-style: none;
     display: flex;
