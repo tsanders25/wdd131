@@ -5,8 +5,6 @@ body {
     font-family: "Roboto", sans-serif;
         }
 
-
-
 header, footer {
     width: 100%;
     background-color: #034748;
@@ -55,7 +53,7 @@ main {
     background: none;
     color: #000;
     position: absolute;
-    top: 4;
+    top: 4px;
     right: 0;
 }
 
@@ -86,8 +84,7 @@ main {
     font-weight: 700;
 }
 
-.navigation a:hover {
-    
+.navigation a:hover {    
     color: white;
 }
 
@@ -100,78 +97,6 @@ figure img {
     height: auto;
 
     border: 1px solid gray;
-
-}
-
-figcaption {
-    text-align: center;
-}
-
-/*header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #034748;
-    padding: 2rem;
-    
-}
-
-#temple-album {
-    color: white;
-    font-size: xx-large;
-}
-.navigation {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    background-color: #034748;
-    color: #fff;
-}
-
-.navigation li {
-    flex: 1 1 auto;
-}
-
-.navigation a {
-    font-weight: 700;
-    font-size: x-large;
-    display: block;
-    padding: 0.75rem;
-    text-decoration: none;
-    text-align: center;
-
-    color: #fff;
-}
-
-.navigation a:hover {
-    text-decoration: underline;
-    text-decoration-color: #fff;
-}
-
-main {
-    max-width: 1280px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
-
-h1 {
-    grid-column: 1 / 4;
-    text-align: center;
-
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-
-    border: 1px solid gray;
-
-
 }
 
 figcaption {
