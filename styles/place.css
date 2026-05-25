@@ -43,7 +43,7 @@ main {
 }
 
 #weather-table h2::after {
-    content: url("styles/weather.svg");
+    content: url("images/weather.svg");
     display: inline-block;
     width: 50px;
     height: auto;
