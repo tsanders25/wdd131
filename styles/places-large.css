@@ -1,0 +1,55 @@
+@media screen and (min-width: 1000px) {
+
+    header {
+        font-size: xx-large;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    #data-table {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    #weather-table {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        margin: 1rem;
+        padding: .5rem;
+    }
+
+    h2 {
+        background-color: teal;
+        color: white;
+        font-size: x-large;
+
+        text-align: left;
+        width: 110%;
+        margin-left: -15%;
+        padding: .5rem 1rem;
+
+        box-shadow: 2px 2px 5px rgba (0,0,0,0.3);
+    }
+
+    #weather-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #weather-icon {
+        width: 50px;
+        height: auto;
+    }
+
+    footer {
+        font-size: x-large;
+    }
+}

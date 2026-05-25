@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131 | Dynamic Web Fundamentals | Ty Sanders | Country Page</title>
+    <meta name="description" content="Ty Sanders Week 3 Assignment">
+    <meta name="author" content="Ty Sanders">
+
+    <link rel="stylesheet" href="styles/places.css">
+    <link rel="stylesheet" href="styles/places-large.css">
+    <script src="scripts/places.js" defer></script>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <span id="country-name">Okinawa, Japan</span>
+    </header>
+    <main>
+        <picture id="hero-image">
+            <source srcset="images/okinawa-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/okinawa-medium.webp" media="(min-width: 500px)">
+            <img src="images/okinawa-map.webp" alt="Okinawa, Japan" width="500" height="auto">
+        </picture>
+        <div id="data-table">
+            <h2>Data</h2>
+                <div class="datatable">
+                    <div class="row">
+                        <div class="col-label">Area:</div>
+                        <div class="col-data">1-2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Population:</div>
+                        <div class="col-data">2-2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Capital:</div>
+                        <div class="col-data">3-2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Language:</div>
+                        <div class="col-data">1-2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Currency:</div>
+                        <div class="col-data">2-2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Time Zone:</div>
+                        <div class="col-data">3-2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Calling Code:</div>
+                        <div class="col-data">2-2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Internet TLD:</div>
+                        <div class="col-data">3-2</div>
+                    </div>
+                </div>
+        </div>
+        <div id="weather-table">
+            <div id="weather-header">
+                <h2>Weather</h2>
+                <img id="weather-icon" src="images/weather.svg" alt="Weather icon" width="100" height="100"> 
+            </div>
+            <div class="datatable">
+                    <div class="row">
+                        <div class="col-label">Temperature:</div>
+                        <div class="col-data" id="temperature">79&deg;F</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Conditions:</div>
+                        <div class="col-data" id="conditions">Cloudy</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Wind:</div>
+                        <div class="col-data id="wind">6 mph</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label">Wind Chill:</div>
+                        <div class="col-data" id="wind-chill">3-2</div>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Ty Sanders | United States</p>
+        <p> Last Modified <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

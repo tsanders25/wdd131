@@ -1,0 +1,81 @@
+:root {
+    --bord: 1px solid black;
+}
+
+* {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: teal;
+
+}
+
+header {
+    color: white;
+    font-size: xx-large;
+}
+
+main {
+    display: block;
+    align-items: center;
+    position: relative;
+}
+
+#hero-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#data-table {
+    background-color: white;
+    padding: 1rem;
+}
+
+#weather-table {
+    background-color: white;
+    padding: 1rem;
+}
+
+#weather-table h2::after {
+    content: url("styles/weather.svg");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.datatable {
+    display: grid;
+    width: 100%;
+    margin: 2rem auto;
+    align-items: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    gap: .5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.col-data {
+    text-align: left;
+}
+
+.col-label {
+    text-align: right;
+}
+
+footer {
+    color: white;
+}
