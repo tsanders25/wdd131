@@ -1,0 +1,30 @@
+#questionOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    /* Dark background for focus */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-container {
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+#questionText {
+    font-size: 3rem;
+    /* Nice and big */
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none !important;
+}

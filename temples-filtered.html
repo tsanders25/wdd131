@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131 | Dynamic Web Fundamentals | Ty Sanders | Temple Album</title>
+    <meta name="description"
+        content="A album of temple photos created by Ty Sanders for the purpose of learning dynamic web fundamentals for BYU Pathway's WDD131 class">
+    <meta name="author" content="Ty Sanders">
+
+    <!--links to style and scripts-->
+    <link rel="stylesheet" href="styles/temples-filtered.css">
+    <link rel="stylesheet" href="styles/temples-large-filtered.css">
+    <script src="scripts/temples-filtered.js" defer></script>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <span id="temple-album">WDD131 Temple Album</span>
+        <button id="menu" aria-label="Open Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" title="home">Home</a></li>
+                <li><a href="#" title="old">Old</a></li>
+                <li><a href="#" title="new">New</a></li>
+                <li><a href="#" title="large">Large</a></li>
+                <li><a href="#" title="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Temple Gallery</h2>
+        <div id="temple-cards-container">
+        </div>
+    </main>
+    <footer>
+    <p>&copy;<span id="currentyear"></span> | Ty Sanders | United States</p>
+    <p> Last Modified <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html> 

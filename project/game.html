@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/red-rover.css">
+    <script src="scripts/game-logic.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Game Page</h1>
+    </header>
+    <main>
+        <div id="questionOverlay" class="hidden">
+            <div class="game-container">
+                <!-- Question Counter (Point 7) -->
+                <div id="questionCounter">Question 1 of 10</div>
+        
+                <!-- The Big Question Area (Point 10) -->
+                <div id="questionBox">
+                    <h1 id="questionText">The question will appear here...</h1>
+                </div>
+        
+                <!-- Hidden Answer & Notes Area -->
+                <div id="answerArea" class="hidden">
+                    <h2 id="answerText">The Answer</h2>
+                    <p id="noteText">Supporting notes go here...</p>
+                </div>
+        
+                <!-- Controls -->
+                <div class="controls">
+                    <button onclick="revealAnswer()">Show Answer</button>
+                    <button onclick="nextQuestion()">Next Question</button>
+                    <button onclick="closeGame()" class="exit-btn">Exit Chapter</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+:root{
+    --border: hsla(0, 0%, 20%, .8);
+    --shadow: hsl(0, 0%, 50%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+        }
+
+header, footer {
+    width: 100%;
+    background-color: #034748;
+    color: white;
+    padding: 1rem;
+}
+
+footer {
+    grid-column: 1 / 4;
+    padding: 2rem;
+    text-align: center;
+    font-weight: 700;
+    background: #034748;
+    color: #fff;
+}
+
+#temple-album {
+    padding: 1rem;
+    font-size: x-large;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    max-width: 640px;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    place-items: center;
+}
+
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+nav {
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.navigation a:hover {    
+    color: white;
+}
+
+.open a {
+    display: block;
+}
+
+.temple-card {
+    margin: 10px auto;
+    padding: 1rem;
+    border: thin solid var(--border);
+    box-shadow: 0 0 10px var(--shadow);
+    border-collapse: collapse;
+    background: lightgray;
+    max-width: 300px;
+}
+
+#temple-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem;
+
+}
+
+#temple-cards-container img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid black;
+    margin: 1rem;
+}
+
+figcaption {
+    text-align: center;
+}
+ 
