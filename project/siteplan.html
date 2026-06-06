@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Rover | Study Game</title>
 
-    <meta name="description"
-        content="Red Rover is the study game that makes you play against your friends, classmates, or teacher 
+    <meta name="description" content="Red Rover is the study game that makes you play against your friends, classmates, or teacher 
         for control of the universe.">
     <meta name="author" content="Ty Sanders">
-    
+
     <!--links to style and scripts-->
     <link rel="stylesheet" href="styles/red-rover.css">
     <script src="scripts/red-rover.js" defer></script>
-    
+
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&family=Roboto&family=Science+Gothic:wght@100..900&display=swap"
+        rel="stylesheet">
+
+
 </head>
+
 <body>
     <header>
         <span id="game-title">Red Rover</span>
-        
+
         <nav>
             <ul class="navigation">
-                <li><a href="http://127.0.0.1:5501/wdd131/project/study-buddy.html"
-                        title="study-buddy">Study Buddy</a></li>
-                <li><a href="http://127.0.0.1:5501/wdd131/project/game.html" 
-                    title="game">Game</a></li>
+                <li><a href="http://127.0.0.1:5501/wdd131/project/study-buddy.html" title="study-buddy">Study Buddy</a>
+                </li>
+                <li><a href="http://127.0.0.1:5501/wdd131/project/game.html" title="game">Game</a></li>
                 <li><a href="#" title="team-void"></a>Team vs Void</li>
                 <li><a href="#" title="team-team-void">Teams vs Void</a></li>
             </ul>
@@ -37,27 +40,108 @@
     </header>
     <main>
         <div>
-        <h1>Red Rover</h1>
+            <h1>Red Rover</h1>
         </div>
-        <div class="section">
-            <h2>Upload questions</h2>
+        <div id="site-purpose">
+            <h2>Site Name</h2>
+            <p>red-rover.com</p>
+            <h2>Site Purpose</h2>
+            <p>The purpose of this site is to create a group study game.
+                Users should be able to upload a document filled out in a
+                question and answer format. The website ideally will have a
+                series of logic in js that will create teams and go through
+                a game using the uploaded questions.
+            </p>
+            <div id="scenarios">
+                <h2>Scenario 1</h2>
+                <p>A user downloads a google sheets or excel template and fills it
+                    out according to the instructions. They can do what ever subjet they
+                    would like as long as the format is question/answer</p>
+                <h2>Scenario 2</h2>
+                <p>A user with their friends or a teacher with their class uploads a
+                    series of questions and then selects which game they would like to play.
+                    There are several options and each have their own required JavaScript logic.
+                </p>
+            </div>
         </div>
-        <div>
-            <h2>Download Study Buddy</h2>
+        <div id="study-buddy">
+            <div class="mascot">
+                <figure>
+                    <img src="images/space-rover-2-svgrepo-com.svg" alt="Red-Rover Mascot" width="200px">
+                    <figcaption>This is the Red Rover website logo</figcaption>
+                </figure>
+            </div>
+            <div>
+                <h2>Upload questions</h2>
+                <button>this will be a button</button>
+            </div>
+            <div>
+                <h2>Download Study Buddy</h2>
+                <button>this will be a button</button>
+            </div>
         </div>
-        <div>
+        <div id="game-choice">
             <h2>Choose your game</h2>
             <figure>
-                <img src="images/earth-svgrepo-com.svg" alt="Team vs Team" width="100px" height="100px"> 
+                <img src="images/earth-svgrepo-com.svg" alt="Team vs Team" width="100px" height="100px">
                 <figcaption>Team vs Team</figcaption>
             </figure>
             <figure>
                 <img src="#" alt="#">
-                <figcaption>This is a caption</figcaption>
+                <figcaption>This is another game option</figcaption>
             </figure>
             <figure>
                 <img src="#" alt="#">
-                <figcaption>This is a caption</figcaption>
+                <figcaption>This is another game option</figcaption>
+            </figure>
+        </div>
+        <div id="color-scheme">
+            <h2>This is my color scheme (I'll probably add some green too)</h2>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+            <div class="circle5"></div>
+            <div class="circle6"></div>
+            <div class="circle7"></div>
+            <div class="circle8"></div>
+            <div class="circle9"></div>
+            <div class="circle10"></div>
+            <div class="circle11"></div>
+            <div class="circle12"></div>
+        </div>
+        <div id="typography">
+            <h2>Font Samples</h2>
+            <div id="roboto-sample">
+                <h3>Roboto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque commodi aliquam in facere rem placeat
+                    error non quaerat illo quo magnam at dolores, maiores, optio tenetur minima ex! Omnis, maiores?</p>
+            </div>
+            <div id="science-gothic-sample">
+                <h3>Science Gothic</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo commodi inventore
+                    consequatur quasi nam quisquam quo itaque aperiam est, a incidunt odio deserunt voluptatem debitis
+                    sit quidem ipsa neque?</p>
+            </div>
+            <div id="handjet-sample">
+                <h3>Handjet</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, laudantium aut? Obcaecati, odio
+                    sint ea quam perferendis vel quidem officia eveniet quos enim, porro fuga inventore dicta optio
+                    praesentium veritatis!</p>
+            </div>
+        </div>
+        <div id="wire-frames">
+            <h3>Main Page Wire Frame</h3>
+            <figure>
+                <img src="images/red-rover.drawio.svg" alt="red-rover wire frame">
+            </figure>
+            <h3>Study Buddy Wire Frame</h3>
+            <figure>
+                <img src="images/study-buddy.drawio.svg" alt="study-buddy wire frame">
+            </figure>
+            <h3>Game Page Wire Frame</h3>
+            <figure>
+                <img src="images/game-page.svg" alt="game-page wire frame">
             </figure>
         </div>
     </main>
@@ -66,4 +150,5 @@
         <p> Last Modified <span id="lastModified"></span></p>
     </footer>
 </body>
+
 </html>
