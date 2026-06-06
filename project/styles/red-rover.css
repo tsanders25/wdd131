@@ -1,30 +1,207 @@
-#questionOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.95);
-    /* Dark background for focus */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+header {
+    grid-column: 1 / 4;
+
 }
 
-.game-container {
+#game-title {
+    display: block;
     text-align: center;
-    width: 80%;
-    max-width: 900px;
+    background-color: #e7413e;
+    padding: 0.5rem;
+    color: #fff;
+
+    font-weight: 700;
+    font-size: xx-large;
 }
 
-#questionText {
-    font-size: 3rem;
-    /* Nice and big */
-    margin-bottom: 2rem;
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    background-color: #cbe7f5
+        /*light blue*/;
+    color: black;
+
 }
 
-.hidden {
-    display: none !important;
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation a {
+    font-weight: 700;
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+
+    color: black;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+/*main styling*/
+main {
+    display: grid;
+    gap: 1rem;
+}
+
+/*Site purpose and scenarios*/
+#scenarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/*Study Buddy Options*/
+#study-buddy {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.mascot {
+    grid-column: 1 / 3;
+    justify-self: center;
+}
+
+/*Game Choice*/
+#game-choice {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1 rem;
+}
+
+/*Color Scheme*/
+
+#color-scheme {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+h2 {
+    grid-column: 1 / 5;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    background-color: #cbe7f5;
+    border-radius: 50%;
+}
+
+.circle2 {
+    width: 100px;
+    height: 100px;
+    background-color: #e6e4da;
+    border-radius: 50%;
+}
+
+.circle3 {
+    width: 100px;
+    height: 100px;
+    background-color: #e7413e;
+    border-radius: 50%;
+}
+
+.circle4 {
+    width: 100px;
+    height: 100px;
+    background-color: #85bfe9;
+    border-radius: 50%;
+}
+.circle5 {
+    width: 100px;
+    height: 100px;
+    background-color: #a42116;
+    border-radius: 50%;
+}
+
+.circle6 {
+    width: 100px;
+    height: 100px;
+    background-color: #f2910d;
+    border-radius: 50%;
+}
+
+.circle7 {
+    width: 100px;
+    height: 100px;
+    background-color: #1f4863;
+    border-radius: 50%;
+}
+
+.circle8 {
+    width: 100px;
+    height: 100px;
+    background-color: #696a9b;
+    border-radius: 50%;
+}
+.circle9 {
+    width: 100px;
+    height: 100px;
+    background-color: #ffe19b;
+    border-radius: 50%;
+}
+
+.circle10 {
+    width: 100px;
+    height: 100px;
+    background-color: #fab900;
+    border-radius: 50%;
+}
+
+.circle11 {
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle12 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* Typography */
+#roboto-sample {
+    font-family: "Roboto", sans-serif;
+}
+
+#science-gothic-sample {
+    font-family: "Science Gothic", sans-serif;
+}
+
+#handjet-sample {
+    font-family: "Handjet", sans-serif;
+}
+
+
+/* Wire Frames */
+#wire-frames {
+    display: grid;
+    justify-self: center;    
+    gap: 1rem;
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+#wire-frames figure {
+    border: 1px solid black;
+    padding: 2rem;
 }
