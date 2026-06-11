@@ -34,26 +34,26 @@
             <div class="section">Overall Rating</div>
                 <input type="radio" id="star1" name="audience" value="1-star" required>
                 <label for="star1">&starf;</label>
-                <input type="radio" id="star2" name="audience" value="2-star">
+                <input type="radio" id="star2" name="audience" value="2-star" required>
                 <label for="star2">&starf; &starf;</label>
-                <input type="radio" id="star3" name="audience" value="3-star">
+                <input type="radio" id="star3" name="audience" value="3-star" required>
                 <label for="star3">&starf; &starf; &starf;</label>
-                <input type="radio" id="star4" name="audience" value="4-star">
+                <input type="radio" id="star4" name="audience" value="4-star" required>
                 <label for="star4">&starf; &starf; &starf; &starf;</label>
-                <input type="radio" id="star5" name="audience" value="5-star">
+                <input type="radio" id="star5" name="audience" value="5-star" required>
                 <label for="star5">&starf; &starf; &starf; &starf; &starf;</label>
             <label class="section">Date of Installation</label>
                 <input type="date" id="installDate" name="completeDate" required>
             <div class="section">Which features did you find useful in the product?</div>
                 <div class="section">(Check all that apply.)</div>
-                <label><input type="checkbox" name="durability" value="yes">Durability</label>
-                <label><input type="checkbox" name="ease-of-use" value="yes">Ease of Use</label>
-                <label><input type="checkbox" name="performance" value="yes">Performance</label>
-                <label><input type="checkbox" name="design" value="yes">Design</label>
+                <label><input type="checkbox" id="durability-feat" name="durability" value="yes">Durability</label>
+                <label><input type="checkbox" id="ease-of-use-feat" name="ease-of-use" value="yes">Ease of Use</label>
+                <label><input type="checkbox" id="performance-feat" name="performance" value="yes">Performance</label>
+                <label><input type="checkbox" id="design-feat" name="design" value="yes">Design</label>
             <div class="section">Write a Review (optional)</div>
-                <textarea name="review" class="fill-in" cols="50" rows="10" placeholder="What do you think about the product you selected?"></textarea>
+                <textarea id="textarea" name="review" class="fill-in" cols="50" rows="10" placeholder="What do you think about the product you selected?"></textarea>
             <div class="section">Username (optional)</div>
-                <input type="text" name="username" class="fill-in">
+                <input type="text" id="username" name="username" class="fill-in">
                 <input type="submit" value="Send My Review">
     </fieldset>
 </form>
