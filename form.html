@@ -19,24 +19,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
-<>
+<body>
 <main>
+    <header>
 <h1>WDD131 Product Review</h1>
-<form method="get" action="thanks.html" class="wf1">
+</header>
+<form method="get" action="review.html" class="wf1">
     <fieldset>
         <legend>Product Review</legend>
             <label for="dropDownMenu" class="section">Product Name<label/>  
-                <select name="subject" class="fill-in" id="dropDownMenu">
-                    <option value="" disabled selected>Choose a product </option>
+                <select name="subject" class="fill-in" id="dropDownMenu" required>
+                    <option value="" disabled selected>Select a product... </option>
                 </select>
             <div class="section">Overall Rating</div>
-                <label><input type="radio" name="audience" value="1-star">&starf;</label>
-                <label><input type="radio" name="audience" value="2-star">&starf; &starf;</label>
-                <label><input type="radio" name="audience" value="3-star">&starf; &starf; &starf;</label>
-                <label><input type="radio" name="audience" value="4-star">&starf; &starf; &starf; &starf;</label>
-                <label><input type="radio" name="audience" value="5-star">&starf; &starf; &starf; &starf; &starf;</label>
-            <div class="section">Date of Installation</div>
-                <input type="date" name="completeDate">
+                <input type="radio" id="star1" name="audience" value="1-star" required>
+                <label for="star1">&starf;</label>
+                <input type="radio" id="star2" name="audience" value="2-star">
+                <label for="star2">&starf; &starf;</label>
+                <input type="radio" id="star3" name="audience" value="3-star">
+                <label for="star3">&starf; &starf; &starf;</label>
+                <input type="radio" id="star4" name="audience" value="4-star">
+                <label for="star4">&starf; &starf; &starf; &starf;</label>
+                <input type="radio" id="star5" name="audience" value="5-star">
+                <label for="star5">&starf; &starf; &starf; &starf; &starf;</label>
+            <label class="section">Date of Installation</label>
+                <input type="date" id="installDate" name="completeDate" required>
             <div class="section">Which features did you find useful in the product?</div>
                 <div class="section">(Check all that apply.)</div>
                 <label><input type="checkbox" name="durability" value="yes">Durability</label>
