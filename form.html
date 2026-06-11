@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131 | Dynamic Web Fundamentals | Ty Sanders</title>
+    <meta name="description"
+        content="Ty Sanders personal website dedicated to learning dynamic web fundmaentals for BYU Pathway's WDD131 class">
+    <meta name="author" content="Ty Sanders">
+
+    <!--links to style and scripts-->
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<>
+<main>
+<h1>WDD131 Product Review</h1>
+<form method="get" action="thanks.html" class="wf1">
+    <fieldset>
+        <legend>Product Review</legend>
+            <label for="dropDownMenu" class="section">Product Name<label/>  
+                <select name="subject" class="fill-in" id="dropDownMenu">
+                    <option value="" disabled selected>Choose a product </option>
+                </select>
+            <div class="section">Overall Rating</div>
+                <label><input type="radio" name="audience" value="1-star">&starf;</label>
+                <label><input type="radio" name="audience" value="2-star">&starf; &starf;</label>
+                <label><input type="radio" name="audience" value="3-star">&starf; &starf; &starf;</label>
+                <label><input type="radio" name="audience" value="4-star">&starf; &starf; &starf; &starf;</label>
+                <label><input type="radio" name="audience" value="5-star">&starf; &starf; &starf; &starf; &starf;</label>
+            <div class="section">Date of Installation</div>
+                <input type="date" name="completeDate">
+            <div class="section">Which features did you find useful in the product?</div>
+                <div class="section">(Check all that apply.)</div>
+                <label><input type="checkbox" name="durability" value="yes">Durability</label>
+                <label><input type="checkbox" name="ease-of-use" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="performance" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+            <div class="section">Write a Review (optional)</div>
+                <textarea name="review" class="fill-in" cols="50" rows="10" placeholder="What do you think about the product you selected?"></textarea>
+            <div class="section">Username (optional)</div>
+                <input type="text" name="username" class="fill-in">
+                <input type="submit" value="Send My Review">
+    </fieldset>
+</form>
+</main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Ty Sanders | United States</p>
+        <p> Last Modified <span id="lastModified"></span></p>
+    </footer>
+    </body>
+    
+</html>
