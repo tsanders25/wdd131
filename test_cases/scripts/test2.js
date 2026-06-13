@@ -21,6 +21,7 @@ studyBuddySheet.forEach(sheet => {
     }
 });
 
+/*---Creates Study Buddy Sheet when user clicks button----*/
 createStudyBuddyBtn.addEventListener("click", () => {
     const userTypedName = sheetInput.value.trim();
     if (userTypedName === "") {
@@ -31,7 +32,8 @@ createStudyBuddyBtn.addEventListener("click", () => {
     const uniqueSheet = {
         id: Date.now(),
         name: userTypedName,
-        entry: []
+        entry: [],
+        selected: false
     };
 
     studyBuddySheet.push(uniqueSheet);
@@ -43,12 +45,25 @@ createStudyBuddyBtn.addEventListener("click", () => {
 
 });
 
+/*----Displays study buddy/entries and deletes entries ----*/
 function displayList(studyBuddyObject) {
     let li = document.createElement("li");
 
     let nameText = document.createTextNode(studyBuddyObject.name);
     li.appendChild(nameText);
 
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = studyBuddyObject.selected;
+    checkbox.classList.add("sheet-checkbox");
+
+    checkbox.addEventListener("change", () => {
+        studyBuddyObject.selected = checkbox.checked;
+        setStudyBuddyList();
+    });
+
+    li.prepend(checkbox);
+    
     let deleteButton = document.createElement("button");
     deleteButton.textContent = "❌";
     deleteButton.classList.add("delete");
@@ -119,7 +134,8 @@ function displayList(studyBuddyObject) {
                 entryListUI.appendChild(entryLi);
             }
         });
-        setStudyBuddyList();
+            setStudyBuddyList();
+            entryInput.value = "";
         }
     
     })
@@ -165,8 +181,25 @@ function displayList(studyBuddyObject) {
     });
 }
 
+/*--- deletes Study Buddies----*/
 function deleteStudyBuddy(sheetId) {
     studyBuddySheet = studyBuddySheet.filter(sheet => sheet.id !== sheetId);
     setStudyBuddyList();
 }
 
+/*--- Connects Study Buddy to game-----*/
+const createTeamBtn = document.getElementById("create-team-btn");
+
+createTeamBtn.addEventListener("click", () => {
+    const selectedEntries = studyBuddySheet
+        .filter(sheet => sheet.selected)
+        .flatMap(sheet => sheet.entry);
+    
+    if (selectedEntries.length === 0) {
+        alert("Please select at least one sheet that has questions!");
+        return;
+    }
+
+    localStorage.setItem("activeGameData", JSON.stringify(selectedEntries));
+    window.location.href = "game.html";
+});
