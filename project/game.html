@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="styles/red-rover.css">
+    <link rel="stylesheet" href="styles/red-rover-game-play.css">
     <script src="scripts/game-logic.js"></script>
 
 </head>
@@ -22,6 +22,19 @@
             </nav>
     </header>
     <main>
+        <section id="team-creator">
+            <h2>Create your teams!</h2>
+            <div class="input-group">
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" placeholder="e.g., Astronauts, Comets, Robots...">
+                <button id="add-team-btn">Create Team!</button>
+            </div>
+        </section>
+        <div id="team-display">
+            <ul id="list"></ul>
+        </div>
+        
+        <button id="begin-game-btn" class="main-btn">Begin Game!</button>
         <div id="questionOverlay" class="hidden">
             <div class="game-container">
                 <!-- Question Counter (Point 7) -->

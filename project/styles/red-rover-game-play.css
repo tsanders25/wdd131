@@ -28,3 +28,20 @@
 .hidden {
     display: none !important;
 }
+
+#list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#list li {
+    background-color: pink;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
