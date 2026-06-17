@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131 | Dynamic Web Fundamentals | Ty Sanders</title>
+    <meta name="description"
+        content="Ty Sanders personal website dedicated to learning dynamic web fundmaentals for BYU Pathway's WDD131 class">
+    <meta name="author" content="Ty Sanders">
+
+    <!--links to style and scripts-->
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD131 | Dynamic Web Fundamentals | Ty Sanders</span>
+    
+        <nav>
+            <ul class="navigation">
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p34#p34"
+                        title="favorite scripture">Favorite Scripture</a></li>
+                <li><a href="#" title="Final Project">Final Project</a></li>
+                <li><a href="https://byupw.instructure.com/" title="canvas">Canvas</a></li>
+                <li><a href="https://www.linkedin.com/jobs?mcid=6994434350142418944&src=go-pa&trk=sem-ga_campid.18853522261_asid.146084015209_crid.732549151385_kw.linkedin_d.c_tid.kwd-296170574619_n.g_mt.e_geo.9011306&cid=&gclsrc=aw.ds&gad_source=1&gad_campaignid=18853522261&gbraid=0AAAAABIeiSohG8a2pqibGdvojGER2aJbV&gclid=EAIaIQobChMIndjyl_yilAMV5TLUAR3VvShnEAAYASAAEgIqiPD_BwE"
+                        title="Linked In">Linked In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Final Project</h1>
+            <section class="card card_1">
+                <h2>Things I Learned During This Project</h2>
+                    <ul id="colorHistory"></ul>
+                    <p id="currentColor">The color is currently...</p>
+            </section>
+            <section class="card card_2">
+                <h2>Sources and Tutorials</h2>
+                <ul id="sources">
+                    <li><a href="https://www.youtube.com/watch?v=oTyU5f92FLY" title="Color Randomizer">Color Randomizer Tutorial</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=AnmwHjpEhtA&t=601s" title="Tic Tac Toe Tutorial">Tic Tac Toe Tutorial</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=aNDqzlAKmZc" title="Hamburger Menu">Hamburger Menu Tutorial</a></li>
+                </ul>
+            </section>
+    </main>
+    <div id="aside-content">
+        <div id="gameContainer">
+            <h2>Tic Tac Toe</h2>
+            <div id="cellContainer">
+                <div cellIndex="0" class="cell"></div>
+                <div cellIndex="1" class="cell"></div>
+                <div cellIndex="2" class="cell"></div>
+                <div cellIndex="3" class="cell"></div>
+                <div cellIndex="4" class="cell"></div>
+                <div cellIndex="5" class="cell"></div>
+                <div cellIndex="6" class="cell"></div>
+                <div cellIndex="7" class="cell"></div>
+                <div cellIndex="8" class="cell"></div>
+            </div>
+        <h3 id="statusText"></h3>
+        <button id="restartBtn">Restart</button>
+        <div id="stats">
+            <h3>Game Stats</h3>
+            <div id="playerScores">
+                <div cellIndex="player1" id="player1-score"></div>
+                <div cellIndex="player2" id="player2-score"></div>
+                <button id="clearPlayerScores">Delete Scores</button>
+            </div>
+        </div>
+    </div>
+    </div>    
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Ty Sanders | United States</p>
+        <p> Last Modified <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

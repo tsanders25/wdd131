@@ -140,25 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     /* --- js / game - logic.js-- - */
 
-    // 1. Reveal Answer Logic
-    function revealAnswer() {
-        const answerArea = document.getElementById('answerArea');
-        answerArea.classList.remove('hidden'); // Removes the 'hidden' class to show text
-    }
-
-    // 2. Next Question Logic
-    function nextQuestion() {
-        // For now, this just alerts us. 
-        // Soon, this will pull the next row from your spreadsheet!
-        alert("Moving to the next question...");
-    }
-
-    // 3. Close Game Logic
-    function closeGame() {
-        document.getElementById('questionOverlay').classList.add('hidden');
-    }
-
-    // This will hold the questions for the current chapter
     let currentQuestions = [];
     let currentIndex = 0;
 
@@ -167,22 +148,25 @@ document.addEventListener("DOMContentLoaded", () => {
         currentQuestions = questions;
         currentIndex = 0;
 
-        // Show the full-screen overlay
+        if (questions.length === 0) {
+            alert("You need questions to play!")
+        }
+
         document.getElementById('questionOverlay').classList.remove('hidden');
         updateQuestionDisplay();
     }
 
     function updateQuestionDisplay() {
+        pickCompetitors();
+
         const q = currentQuestions[currentIndex];
         document.getElementById('questionText').innerText = q.Question;
         document.getElementById('answerText').innerText = q.Answer;
         document.getElementById('noteText').innerText = q.Note || "";
 
-        // Update counter (Point 7)
         const remaining = currentQuestions.length - (currentIndex + 1);
         document.getElementById('questionCounter').innerText = `Questions left: ${remaining}`;
 
-        // Hide answer area for the new question
         document.getElementById('answerArea').classList.add('hidden');
     }
 
@@ -194,13 +178,152 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentIndex < currentQuestions.length - 1) {
             currentIndex++;
             updateQuestionDisplay();
+            checkWinConditions();
         } else {
-            alert("Chapter Complete!");
-            closeGame();
+            showResults();
         }
     }
 
     function closeGame() {
         document.getElementById('questionOverlay').classList.add('hidden');
     }
+
+    const beginGameBtn = document.getElementById("begin-game-btn");
+
+
+    beginGameBtn.addEventListener("click", () => {
+        const rawData = JSON.parse(localStorage.getItem("activeGameData")) || [];
+
+        const gameDeck = rawData.map(item => {
+            const parts = item.split(" | ");
+            return {
+                Question: parts[0] ? parts[0].replace("Q: ", "") : "Missing Question",
+                Answer: parts[1] ? parts[1].replace("A: ", "") : "Missing Answer"
+            };
+        });
+
+        if (gameDeck.length > 0) {
+            startGame(gameDeck);
+        } else {
+            alert("No questions found! Please go back and select a study buddy!")
+        }
+    });
+
+    document.getElementById("reveal-btn").addEventListener("click", revealAnswer);
+    document.getElementById("next-btn").addEventListener("click", nextQuestion);
+    document.getElementById("close-btn").addEventListener("click", closeGame);
+    document.getElementById("player1Display").addEventListener("click", () => transferPlayer(0));
+    document.getElementById("player2Display").addEventListener("click", () => transferPlayer(1));
+
+    let currentCompetitors = { team1Player: "", team2Player: "" };
+
+    function pickCompetitors() {
+        if (allTeams.length < 2) {
+            alert("Please select atleast two teams!")
+            return;
+        }
+
+        const team1 = allTeams[0];
+        const team2 = allTeams[1];
+        
+        if (team1.players.length > 0 && team2.players.length > 0) {
+            const p1Index = Math.floor(Math.random() * team1.players.length);
+            currentCompetitors.team1Player = team1.players[p1Index];
+
+
+            const p2Index = Math.floor(Math.random() * team2.players.length);
+            currentCompetitors.team2Player = team2.players[p2Index];
+
+            document.getElementById("player1Display").innerText = `${team1.name}: ${currentCompetitors.team1Player}`;
+            document.getElementById("player2Display").innerText = `${team2.name}: ${currentCompetitors.team2Player}`;
+        }
+        else {
+
+            document.getElementById("player1Display").innerText = "Team empty!";
+            document.getElementById("player2Display").innerText = "Team empty!";
+        }
+    }
+
+    function checkWinConditions() {
+        const team1 = allTeams[0];
+        const team2 = allTeams[1];
+
+        const team1Out = team1.players.length === 0;
+        const team2Out = team2.players.length === 0;
+
+        if (team1Out || team2Out) {
+            showResults();
+        }
+    }
+
+    function transferPlayer(winnerTeamIndex) {
+        const loserTeamIndex = winnerTeamIndex === 0 ? 1 : 0;
+        const winningTeam = allTeams[winnerTeamIndex];
+        const losingTeam = allTeams[loserTeamIndex];
+
+        const loserName = loserTeamIndex === 0 ? currentCompetitors.team1Player : currentCompetitors.team2Player;
+        if (!losingTeam.players.includes(loserName)) return;
+
+        losingTeam.players = losingTeam.players.filter(p => p !== loserName);
+        winningTeam.players.push(loserName);
+
+        setTeamList();
+
+        const isGameOver = losingTeam.players.length === 0;
+
+        if (isGameOver) {
+            showResults();
+            return
+        } else {
+        
+            alert(`${loserName} has been captured be ${winningTeam.name}!`);
+            checkWinConditions();
+
+            listElement.innerHTML = "";
+            allTeams.forEach(team => displayList(team));
+
+            nextQuestion();
+        }
+    }
+
+    function showResults() {
+        const team1 = allTeams[0];
+        const team2 = allTeams[1];
+        let winnerText = "";
+
+        document.getElementById("questionOverlay").classList.add("hidden");
+        document.getElementById("resultsOverlay").classList.remove("hidden");
+
+        if (team1.players.length > team2.players.length) {
+            winnerText = `${team1.name} Wins!`;
+        } else if (team2.players.length > team1.players.length) {
+            winnerText = `${team2.name} Wins!`;
+        } else {
+            winnerText = "It's a Draw!";
+
+        }
+
+        document.getElementById("winMessage").innerText = winnerText;
+        document.getElementById("finalScore").innerText = `${team1.name}: ${team1.players.length} | ${team2.name}: ${team2.players.length}`;
+
+    }
+
+});
+    
+/*Get Dates*/
+const currentyear = document.querySelector("#currentyear");
+const today = new Date();
+
+currentyear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
+
+lastmodified = document.getElementById("lastModified").innerHTML = document.lastModified;
+
+/*hamburger button*/
+
+const hamButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation")
+
+hamButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+    hamButton.classList.toggle("open");
 });

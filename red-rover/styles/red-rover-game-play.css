@@ -1,0 +1,149 @@
+*{
+    font-family: "Roboto", sans-serif;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+body {
+    display: block;
+    justify-content: center;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    background-color: #001021;
+    color: #fff;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation a {
+    font-weight: 700;
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+
+    color: #fff;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+} 
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+    color: black;
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+#team-creator {
+    background-color: #2c3e50;
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        border: 2px solid #3498db;bmh867i87uoi;
+}
+
+#list li {
+    background-color: #2c3e50;
+    border: 2px solid #3498db;bmh867i87uoi;
+    color: white;
+    font-size: larger;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+        border-radius: 20px;
+}
+
+#questionOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    /* Dark background for focus */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-container {
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+#questionText {
+    font-size: 3rem;
+    /* Nice and big */
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#player1Display,
+#player2Display {
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle background */
+    transition: transform 0.2s, background-color 0.2s;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#player1Display:hover,
+#player2Display:hover {
+    background-color: #ffd700;
+    /* Gold color */
+    color: black;
+    transform: scale(1.05);
+    /* Makes it slightly bigger */
+}

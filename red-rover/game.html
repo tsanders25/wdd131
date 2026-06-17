@@ -12,6 +12,7 @@
 <body>
     <header>
         <h1>Game Page</h1>
+        <button id="menu" aria-label="Open Menu"></button>
             <nav>
                 <ul class="navigation">
                     <li><a href="http://127.0.0.1:5501/wdd131/project/red-rover.html" title="home">Home</a></li>
@@ -35,31 +36,41 @@
         </div>
         
         <button id="begin-game-btn" class="main-btn">Begin Game!</button>
-        <div id="questionOverlay" class="hidden">
+        <div id="questionOverlay" class = "hidden"> <!----Add class = "hidden"; here--->
             <div class="game-container">
                 <!-- Question Counter (Point 7) -->
                 <div id="questionCounter">Question 1 of 10</div>
         
                 <!-- The Big Question Area (Point 10) -->
+                <div id="versusContainer">
+                    <div id="player1Display" class="competitor"></div>
+                    <span>VS</span>
+                    <div id="player2Display" class="competitor"></div>
+                </div>
+
                 <div id="questionBox">
                     <h1 id="questionText">The question will appear here...</h1>
                 </div>
         
-                <!-- Hidden Answer & Notes Area -->
                 <div id="answerArea" class="hidden">
                     <h2 id="answerText">The Answer</h2>
+                    <p id="noteText"></p>
                 </div>
         
                 <!-- Controls -->
                 <div class="controls">
-                    <button onclick="revealAnswer()">Show Answer</button>
-                    <button onclick="nextQuestion()">Next Question</button>
-                    <button onclick="closeGame()" class="exit-btn">Exit Chapter</button>
+                    <button id="reveal-btn" onclick="revealAnswer()">Show Answer</button>
+                    <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+                    <button id="close-btn" onclick="closeGame()" class="exit-btn">Exit Chapter</button>
                 </div>
             </div>
         </div>
 
     </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Ty Sanders | United States</p>
+        <p> Last Modified <span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
 

@@ -1,3 +1,38 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+body {
+    display: block;
+    justify-items: center;
+}
+
+main {
+    display: block;
+    justify-items: center;
+}
+
+.hook {
+    display: block;
+    justify-content: center;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Subtle background */
+            transition: transform 0.2s, background-color 0.2s;
+            font-weight: bold;
+            display: inline-block;
+
+}
+
+.section {
+    display: block;
+    justify-content: center;
+}
+
 header {
     grid-column: 1 / 4;
 
@@ -46,20 +81,22 @@ header {
     text-decoration-color: #fff;
 }
 
-/*main styling*/
+
+
+/*main styling
 main {
     display: grid;
     gap: 1rem;
 }
 
-/*Site purpose and scenarios*/
+/*Site purpose and scenarios
 #scenarios {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-/*Study Buddy Options*/
+/*Study Buddy Options
 #study-buddy {
     font-family: "Roboto", sans-serif;
     display: grid;
@@ -72,7 +109,7 @@ main {
     justify-self: center;
 }
 
-/*Game Choice*/
+/*Game Choice
 #game-choice {
     font-family: "Roboto", sans-serif;
     display: grid;
@@ -80,7 +117,7 @@ main {
     gap: 1rem;
 }
 
-/*Color Scheme*/
+/*Color Scheme
 
 #color-scheme {
     font-family: "Roboto", sans-serif;
@@ -178,7 +215,7 @@ h2 {
     border-radius: 50%;
 }
 
-/* Typography */
+/* Typography 
 #roboto-sample {
     font-family: "Roboto", sans-serif;
 }
@@ -192,7 +229,7 @@ h2 {
 }
 
 
-/* Wire Frames */
+/* Wire Frames 
 #wire-frames {
     display: grid;
     justify-self: center;    
@@ -204,4 +241,6 @@ h2 {
 #wire-frames figure {
     border: 1px solid black;
     padding: 2rem;
-}
+} 
+
+*/ 
