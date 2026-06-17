@@ -134,15 +134,18 @@ main h3 {
     border: 2px solid #333;
 }
 
+
+
 #currentColor {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     
     grid-column: 2;
-    
 
 }
+
+
 
 .card_2 {
     grid-template-columns: 1fr 2fr;
@@ -160,6 +163,11 @@ main h3 {
 
 .card_2 p {
     grid-column: 2;
+}
+
+.card_2 li {
+    padding: .5rem;
+    font-size: x-large;
 }
 
 #aside-content {
