@@ -203,3 +203,4 @@ function clearAllScores() {
     document.getElementById("player2-score").textContent = `Player O: 0 points`;
 
 }
+

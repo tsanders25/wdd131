@@ -91,6 +91,8 @@ h1 {
 
     grid-column: 1 / 4;
     text-align: center;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
 }
 
 main h2 {
@@ -100,6 +102,7 @@ main h2 {
     text-align: center;
     color: #fff;
     background: #034748;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
 }
 
 main h3 {
@@ -107,6 +110,7 @@ main h3 {
     padding: 2rem;
     text-align: center;
     text-decoration: underline;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
 }
 
 .card {
@@ -177,6 +181,7 @@ main h3 {
     border: 2px solid #333;
     border-radius: 15px;
     padding: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
 }
 
 #aside-content h2 {
@@ -184,6 +189,7 @@ main h3 {
     text-align: center;
     color: #fff;
     background: #034748;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
 }
 
 #aside-content ul {
@@ -234,10 +240,90 @@ footer {
     color: #fff;
 }
 
+/*FORM SETUP*/
+.wf1 {
+    padding: 1rem;
+    font-size: x-large;
+}
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.radio-container label {
+    padding: 1rem;
+    margin: .5rem;
+}
+
+.grandma-information {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.grandma-information label{
+    padding: 1rem;
+    margin: .5rem;
+}
+
+.grandma-information input {
+    padding: .5rem;
+}
+
+.favorite-pet {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 1rem;
+}
+
+.vacation-information {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.vacation-information label {
+    padding: 1rem;
+    margin: .5rem;
+    font-size: x-large;
+}
+
+
+.vacation-information select {
+    font-size: x-large;
+}
+
+#completeDate {
+    font-size: x-large;
+}
+
+#people {
+    font-size: x-large;
+}
+
+#booking-button {
+    width: 100%;
+    height: 2rem;
+    border: 2px solid black;
+    font-size: x-large;
+}
 /*MOBILE LAYOUT*/
 
 @media (max-width: 767px) {
     body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation {
         display: flex;
         flex-direction: column;
     }
@@ -251,4 +337,11 @@ footer {
         float: none;
     }
 
+    .radio-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
+
