@@ -8,7 +8,8 @@
 body {
     display: grid;
     height: 100vh;
-    grid-template: auto 1fr auto / 300px 1fr auto;
+    grid-template: 2fr 1fr;
+    /*grid-template: auto 1fr auto / 300px 1fr auto;*/
 
     font-family: "Roboto", sans-serif;
 }
@@ -149,8 +150,6 @@ main h3 {
 
 }
 
-
-
 .card_2 {
     grid-template-columns: 1fr 2fr;
 }
@@ -182,6 +181,9 @@ main h3 {
     border-radius: 15px;
     padding: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+
+    display: flex;
+    flex-direction: column;
 }
 
 #aside-content h2 {
@@ -192,8 +194,10 @@ main h3 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
 }
 
-#aside-content ul {
-    padding: 2rem;
+#aside-content img {
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
 }
 
 
@@ -258,46 +262,47 @@ footer {
     margin: .5rem;
 }
 
-.grandma-information {
+.player-information {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
 }
 
-.grandma-information label{
+.player-information label{
     padding: 1rem;
     margin: .5rem;
 }
 
-.grandma-information input {
+.player-information input {
     padding: .5rem;
 }
 
-.favorite-pet {
+.favorite-thing {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1.5rem;
     align-items: center;
     margin-top: 0.5rem;
     padding: 1rem;
+    border: 1px solid black;
 }
 
-.vacation-information {
+.location-information {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
 }
 
-.vacation-information label {
+.location-information label {
     padding: 1rem;
     margin: .5rem;
     font-size: x-large;
 }
 
 
-.vacation-information select {
+.location-information select {
     font-size: x-large;
 }
 
@@ -305,11 +310,11 @@ footer {
     font-size: x-large;
 }
 
-#people {
+#games {
     font-size: x-large;
 }
 
-#booking-button {
+#share-button {
     width: 100%;
     height: 2rem;
     border: 2px solid black;
@@ -335,6 +340,11 @@ footer {
         width: 100%;
         grid-area: auto;
         float: none;
+    }
+
+    #index-main {
+        display: flex;
+        flex-direction: column;
     }
 
     .radio-container {

@@ -1,15 +1,15 @@
-/*MODELED AFTER CODEPEN | CURRENT YEAR*/
-const currentyear = document.querySelector("#currentyear");
-const today = new Date();
+    /*MODELED AFTER CODEPEN | CURRENT YEAR*/
+    const currentyear = document.querySelector("#currentyear");
+    const today = new Date();
 
-currentyear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
+    currentyear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
 
-const lastmodified = document.getElementById("lastModified").innerHTML = document.lastModified;
+    const lastmodified = document.getElementById("lastModified").innerHTML = document.lastModified;
 
-let colorHistoryArray = [];
-let playerXWins = parseInt(localStorage.getItem("playerXWins")) || 0;
-let playerOWins = parseInt(localStorage.getItem("playerOWins")) || 0;
+    let colorHistoryArray = [];
+    let playerXWins = parseInt(localStorage.getItem("playerXWins")) || 0;
+    let playerOWins = parseInt(localStorage.getItem("playerOWins")) || 0;
 
 /*Random Header Color Generator*/
 function generateColor() {
@@ -28,7 +28,9 @@ function generateColor() {
         header) => {header.style.backgroundColor = rgbColor;
 });
 
-
+    window.playerXColor = rgbColor;
+    window.playerOColor = rgbColor;
+    
     document.querySelector("#currentColor").textContent = rgbColor;
     textContrast(red, yellow, blue);
     colorHistoryGenerator();
@@ -39,12 +41,20 @@ generateColor();
 /* Text Contrast Generator */
 function textContrast(red, yellow, blue) {
     const brightness = (red * 0.299) + (yellow * 0.587) + (blue * 0.114);
-    const textContrastColor = brightness > 186 ? "#000000" : "#ffffff";
+    /*const textContrastColor = brightness > 186 ? "#000000" : "#ffffff";*/
+
+    const cellBackgroundColor = "white"/*brightness < 186 ? "#ffffff" : "#000000";*/
+    const headerTextColor = brightness > 186 ? "#ffffff" : "#000000";
 
     const headers = document.querySelectorAll("h1, h2, h3");
     headers.forEach((header) => {
-        header.style.color = textContrastColor;
+        header.style.color = headerTextColor;
         
+    });
+
+    const gameCells = document.querySelectorAll(".cell");
+    gameCells.forEach((cell) => {
+        cell.style.backgroundColor = cellBackgroundColor;
     });
 
     const textDisplay = document.querySelector("#currentTextColor");
@@ -119,6 +129,12 @@ function cellClicked() {
 function updateCell(cell, index) {
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
+
+    if (currentPlayer === "X") {
+        cell.style.color = window.playerXColor;
+    } else {
+        cell.style.color = window.playerOColor;
+    }
 }
 
 function changePlayer() {
@@ -172,9 +188,12 @@ function restartGame() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
     statusText.textContent = `${currentPlayer}'s turn!`;
-    cells.forEach(cell => cell.textContent = "");
+    cells.forEach(cell => {cell.textContent = "";
+    cell.style.color = "";
+});
     running = true;
-    generateColor()
+
+    generateColor();
 }
 
 initializeGame();
@@ -185,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("player1-score").textContent = `Player X: ${playerXWins} points`;
     document.getElementById("player2-score").textContent = `Player O: ${playerOWins} points`;
 
+    
 })
 
 const clearScoresBtn = document.getElementById("clearPlayerScores");
